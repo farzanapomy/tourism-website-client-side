@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
 import img from '../../../images/logo (3).JPG'
 import "./Header.css"
@@ -17,10 +18,10 @@ const Header = () => {
                         </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end ">
-                        <Nav.Link className='nav-menu' as={Link} to="/home#home">Home</Nav.Link>
-                        <Nav.Link className='nav-menu' as={Link} to="/home#services">Services</Nav.Link>
-                        <Nav.Link className='nav-menu' as={Link} to="/addFeatures">Add Features</Nav.Link>
-                        <Nav.Link className='nav-menu' as={Link} to="/home#mechanics">Experts</Nav.Link>
+                        <Nav.Link className='nav-menu' as={HashLink} to="/home#home">Home</Nav.Link>
+                        <Nav.Link className='nav-menu' as={HashLink} to="/home#features">Features</Nav.Link>
+                        <Nav.Link className='nav-menu' as={HashLink} to="/addFeatures">Add Features</Nav.Link>
+                        <Nav.Link className='nav-menu' as={Link} to="">About Us</Nav.Link>
                         {user?.email ?
                             <button onClick={logOut} className='nav-menu' >Sign Out</button>
                             : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>

@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AddFeatures from './pages/AddFeatures/AddFeatures';
+import BookFeature from './pages/BookFeature/BookFeature';
 import Features from './pages/Home/Features/Features';
 import Header from './pages/Home/Header/Header';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
+import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
 
 
@@ -29,9 +31,12 @@ function App() {
             <Route path='/features'>
               <Features></Features>
             </Route>
-            <Route path='/addFeatures'>
-              <AddFeatures></AddFeatures>
+            <Route path='/features/:id'>
+             <BookFeature></BookFeature>
             </Route>
+            <PrivateRoute path='/addFeatures'>
+              <AddFeatures></AddFeatures>
+            </PrivateRoute>
 
             <Route path='*'>
               <NotFound></NotFound>

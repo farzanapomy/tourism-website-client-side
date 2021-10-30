@@ -1,27 +1,38 @@
 [
     {
-        "name": "Primary & Secondary School Trips",
+        "price": 1000,
+        "name": "Dhaka To Chittagong",
         "description": "Unforgettable educational experiences, expertly designed by an award winning team that will broaden horizons for primary and secondary school pupils.",
-        "img": ""
+        "img": "https://lh3.googleusercontent.com/proxy/UMTcRUU8OGu1ryKCVlyvO2UwHSkfMKR28yY1whC3m5I6vvBJnVNFs3T4cQjoUoOh-LHdfKqZDFH3bNlfi-RZof_S1f6vuzNDL3vARMZv7c8I_GDRuFzWwAaiahNB9RW50zgRgJcEnSqkbwTFcQUPNcJmHhJ6XvjRCflBvtiZ2g"
     },
     {
-        "name": "Sixth Form, FE & Universities",
+        "price": 2000,
+        "name": "Chittagong TO Sylhet",
         "description": "Tours tailored to suit your course for students age 16+. Whether your students are Sixth Form, College or University we will plan your trip to support learning outcomes to support your qualification.",
-        "img": ""
+        "img": "http://tourismwindow.com/wp-content/uploads/sylhet-nature-tour-6-days-5-nights-1.jpg"
     },
     {
-        "name": "Guided History Tours",
-        "description": "Expertly guided history tours that will help illuminate historical events with real, personal stories and support your learning objectives with exam board accredited itineraries.",
-        "img": ""
+        "price": 3000,
+        "name": "Sylhet To Cox's Bazar",
+        "description": "Expertly gupriceed history tours that will help illuminate historical events with real, personal stories and support your learning objectives with exam board accredited itineraries.",
+        "img": "https://images.prothomalo.com/prothomalo-english/import/media/2019/10/29/4c567690cd3663ddb127dc60c27e5ae6-Tourism-1.jpeg?w=1200&h=680"
     },
     {
-        "name": "Sports Tours for Schools & Clubs",
+        "price": 4000,
+        "name": "Chittagong To Mymensingh",
         "description": "Sport tours for schools and clubs based in the UK and Europe with competition & facilities that are designed to inspire & motivate your young people",
-        "img": ""
+        "img": "https://media-cdn.tripadvisor.com/media/photo-m/1280/1a/85/7d/f6/shashi-lodge-mymensingh.jpg"
     },
     {
-        "name": "Educational Events for Secondary & Sixth Form",
+        "price": 5000,
+        "name": "Mymensingh To Bandarban",
         "description": "Unique events and seminars that will ask your students to take on new challenges, meet experts, and enhance their learning in a way that’s tailored around your curriculum.",
-        "img": ""
+        "img": "https://live.staticflickr.com/1902/45184527901_124f4da7a6_b.jpg"
+    },
+    {
+        "price": 6000,
+        "name": "Dhaka To Rangamati",
+        "description": "Unique events and seminars that will ask your students to take on new challenges, meet experts, and enhance their learning in a way that’s tailored around your curriculum.",
+        "img": "https://www.thefinancetoday.net/uploads/shares/Rangamati_hanging_Brpricege-2019-12-24-12-47-02.jpg"
     }
 ]

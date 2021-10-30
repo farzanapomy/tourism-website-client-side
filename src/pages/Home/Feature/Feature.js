@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Feature.css'
 
 const Feature = ({ feature }) => {
-    const { name, description } = feature;
+    const { name, description, img, price } = feature;
 
     return (
         <>
             <div className='card-style'>
                 <div class="card">
                     <div class="view overlay">
-                        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/photo9.jpg" alt="" />
+                        <img class="card-img-top" src={img} alt="" />
                         <a>
                             <div class="mask rgba-white-slight"></div>
                         </a>
@@ -33,8 +34,9 @@ const Feature = ({ feature }) => {
                     </div>
                     <div class="card-body">
                         <h4 class="card-title">{name}</h4>
+                        <h4 class="card-title">Tour Price : ${price}</h4>
                         <p class="card-text">{description}</p>
-                        <button class="btn btn-primary">Read more</button>
+                        <Link to={`/features/:id`}> <button class="btn btn-primary">Purchase Now</button></Link>
                     </div>
                 </div>
 

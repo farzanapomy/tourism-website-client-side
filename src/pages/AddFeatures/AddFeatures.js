@@ -5,20 +5,25 @@ import './AddFeatures.css'
 
 
 const AddFeatures = () => {
-    const { register, handleSubmit ,reset} = useForm();
+
+    const { register, handleSubmit, reset } = useForm();
+
+
     const onSubmit = data => {
+        // console.log(data);
+
         axios.post('http://localhost:5000/features', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('added Successfully')
-                    reset()
+                    alert('added successfully');
+                    reset();
                 }
-                console.log(res)
+                console.log(res);
             })
+    }
 
 
-        console.log(data)
-    };
+
     return (
         <div className='add-feature'>
             <h2>Please add your service</h2>
