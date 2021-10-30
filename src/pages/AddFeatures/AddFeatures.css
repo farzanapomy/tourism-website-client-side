@@ -1,0 +1,22 @@
+.add-feature form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0px auto;
+    padding: 50px;
+    text-align: center;
+    background-color: #344e41;
+    
+}
+
+.add-feature input ,textarea{
+    margin: 10px ;
+    border-radius: 10px;
+
+}
+.submit-button{
+    background-color: #344e41;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+}

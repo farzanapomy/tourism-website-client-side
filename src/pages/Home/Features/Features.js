@@ -14,16 +14,18 @@ const Features = () => {
 
     return (
         <div id='features'>
-            <h2>this is our features </h2>
+            <h2>Search offers and find best for you</h2>
             <div className='row'>
 
+                <div className='row row-cols-1 row-cols-md-3 g-4'>
                     {
                         features.map(feature => <Feature
                             feature={feature}
                         ></Feature>)
                     }
+                </div>
             </div>
-            <h2>{features.length}</h2>
+           
         </div>
     );
 };

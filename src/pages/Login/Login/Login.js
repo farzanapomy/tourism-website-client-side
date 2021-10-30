@@ -5,14 +5,14 @@ import './Login.css'
 
 const Login = () => {
     const {singInWithGoogle}=useAuth()
-    // const { register, handleSubmit } = useForm();
-    // const onSubmit = data => console.log(data);
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => console.log(data);
 
     return (
         <div >
            <button onClick={singInWithGoogle} className='btn btn-primary'>Google Sign In</button>
             <h2>this is login</h2>
-            {/* <form className='login-form' onSubmit={handleSubmit(onSubmit)} >
+            <form className='login-form' onSubmit={handleSubmit(onSubmit)} >
                 <input type="text" {...register("name", { required: true, maxLength: 20 })} />
                 <br />
                 <input type="email" {...register("email",)} />
@@ -21,7 +21,7 @@ const Login = () => {
                 <br />
                 <input type="submit" />
 
-            </form> */}
+            </form>
               
         </div >
     );

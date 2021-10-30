@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import img from '../../../images/logo (3).JPG'
@@ -10,24 +10,29 @@ const Header = () => {
     return (
         <>
 
-            <Navbar sticky='top' bg="dark" variant="dark" collapseOnSelect expand="lg">
+            <Navbar sticky='top' className='nav-style'  variant="dark" collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand href="/home#home" className='nav-img' >
                         <img src={img} alt="" />
                         </Navbar.Brand>
                     <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
-                        <Nav.Link as={Link} to="/home#home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/home#services">Services</Nav.Link>
-                        <Nav.Link as={Link} to="/home#mechanics">Experts</Nav.Link>
+                    <Navbar.Collapse className="justify-content-end ">
+                        <Nav.Link className='nav-menu' as={Link} to="/home#home">Home</Nav.Link>
+                        <Nav.Link className='nav-menu' as={Link} to="/home#services">Services</Nav.Link>
+                        <Nav.Link className='nav-menu' as={Link} to="/addFeatures">Add Features</Nav.Link>
+                        <Nav.Link className='nav-menu' as={Link} to="/home#mechanics">Experts</Nav.Link>
                         {user?.email ?
-                            <Button onClick={logOut} variant='light'>Sign Out</Button>
-                            : <Nav.Link as={Link} to="/login">Log In</Nav.Link>
+                            <button onClick={logOut} className='nav-menu' >Sign Out</button>
+                            : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>
                         }
 
                         {user.email &&
                             <Navbar.Text>
                                 Hello <a href="#login"> {user?.displayName} </a>
+                            </Navbar.Text>}
+                        {user.email &&
+                            <Navbar.Text>
+                                <img className='rounded-pill w-50' src={user?.photoURL} alt="" />
                             </Navbar.Text>}
 
                     </Navbar.Collapse>

@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import AddFeatures from './pages/AddFeatures/AddFeatures';
 import Features from './pages/Home/Features/Features';
 import Header from './pages/Home/Header/Header';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import NotFound from './pages/NotFound/NotFound';
+
 
 
 function App() {
@@ -27,11 +29,14 @@ function App() {
             <Route path='/features'>
               <Features></Features>
             </Route>
+            <Route path='/addFeatures'>
+              <AddFeatures></AddFeatures>
+            </Route>
 
             <Route path='*'>
               <NotFound></NotFound>
             </Route>
-        
+
           </Switch>
         </Router>
 
