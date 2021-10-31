@@ -4,11 +4,14 @@ import AuthProvider from './contexts/AuthProvider';
 import AddFeatures from './pages/AddFeatures/AddFeatures';
 import BookFeature from './pages/BookFeature/BookFeature';
 import Features from './pages/Home/Features/Features';
+import Footer from './pages/Home/Footer/Footer';
 import Header from './pages/Home/Header/Header';
 import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
+import SingleFeature from './pages/SingleFeature/SingleFeature';
+
 
 
 
@@ -28,12 +31,15 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
-            <Route path='/features'>
+            <Route exact path='/features'>
               <Features></Features>
             </Route>
-            <Route path='/features/:id'>
-             <BookFeature></BookFeature>
-            </Route>
+            <PrivateRoute exact path='/features/:id'>
+              <SingleFeature></SingleFeature>
+            </PrivateRoute>
+            <PrivateRoute path='bookFeature'>
+              <BookFeature></BookFeature>
+            </PrivateRoute>
             <PrivateRoute path='/addFeatures'>
               <AddFeatures></AddFeatures>
             </PrivateRoute>
@@ -43,6 +49,7 @@ function App() {
             </Route>
 
           </Switch>
+          <Footer></Footer>
         </Router>
 
       </AuthProvider>

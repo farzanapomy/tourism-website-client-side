@@ -1,165 +1,57 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+
+import logo from '../../../images/logo (3).JPG';
+import './Footer.css'
+
 
 const Footer = () => {
+    const element = <FontAwesomeIcon icon={faClock} />
+
     return (
         <div>
-            <div>
-
-                <div className="bg-dark text-center text-white">
-
-                    <div className="container p-4">
-
-                        <section className="mb-4">
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-facebook-f"></i
-                            ></a>
-
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-twitter"></i
-                            ></a>
-
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-google"></i
-                            ></a>
-
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-instagram"></i
-                            ></a>
-
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-linkedin-in"></i
-                            ></a>
-
-                            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
-                            ><i className="fab fa-github"></i
-                            ></a>
-                        </section>
-
-                        <section className="">
-                            <form action="">
-
-                                <div className="row d-flex justify-content-center">
-                                    <div className="col-auto">
-                                        <p className="pt-2">
-                                            <strong>Sign up for our newsletter</strong>
-                                        </p>
-                                    </div>
-
-                                    <div className="col-md-5 col-12">
-                                        <div className="form-outline form-white mb-4">
-                                            <input type="email" id="form5Example21" className="form-control" />
-                                            <label className="form-label" htmlFor="form5Example21">Email address</label>
-                                        </div>
-                                    </div>
-                                    <div className="col-auto">
-                                        <button type="submit" className="btn btn-outline-light mb-4">
-                                            Subscribe
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </section>
-
-
-
-                        <section className="mb-4">
+            <div className="container px-4 bg-dark text-light my-5 p-5">
+                <div className="row g-5">
+                    <div className="col">
+                        <div className="p-3 border  border-0">
+                            <img className='bg-light text-light w-50' src={logo} alt="" />
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-                                repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-                                eum harum corrupti dicta, aliquam sequi voluptate quas.
+                                Being a full-time psychologist, I make my patients feel special so they can discuss their problems openly. My goal is to help people fighting their fears and pfe issues.
                             </p>
-                        </section>
 
-
-
-                        <section className="">
-
-                            <div className="row">
-
-                                <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 className="text-uppercase">Links</h5>
-
-                                    <ul className="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#!" className="text-white">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 className="text-uppercase">Links</h5>
-
-                                    <ul className="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#!" className="text-white">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-
-                               <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 className="text-uppercase">Links</h5>
-
-                                    <ul className="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#!" className="text-white">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                    <h5 className="text-uppercase">Links</h5>
-
-                                    <ul className="list-unstyled mb-0">
-                                        <li>
-                                            <a href="#!" className="text-white">Link 1</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 2</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 3</a>
-                                        </li>
-                                        <li>
-                                            <a href="#!" className="text-white">Link 4</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
+                        </div>
                     </div>
-                    <div class="text-center p-3">
-                        © 2021 Copyright by Farzana Pomy
+                    <div className="col ">
+                        <div className="p-3 border  text-style border-0">
+                            <h6>Contact Details</h6>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <p><i className="fab fa-facebook"></i></p>
+                                <p>1870 Alpaca Way Irvine, Chittagong 92614.Bangladesh</p>
+                            </div>
+                            <div className='d-flex justify-content-center align-items-center'>
+                                <p><i className="fas fa-phone"></i></p>
+                                <p>Phone: +1 921 124 9220,Mail: info@psychare.com</p>
+
+                            </div>
+                            <div className='d-flex justify-content-center align-items-center m-2'>
+                                <p>{element}</p>
+                                <p>Mon - Fri: ( 9am - 6pm )</p>
+                                <p>Sat & Sun: CLOSED</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="col">
+                        <div className="p-3 border border-0  ">
+                            <h6>Book Tickets</h6>
+                            <p>Hotel Reservation: +1-202-555-0145</p>
+                            <p>Contact us now for a quote about consultation ( Available 24/7 )</p>
+                        </div>
                     </div>
                 </div>
-
-
-            </div >
+            </div>
+            <p className='footer-text '>© 2021 - Copyright by Farzana Pomy</p>
         </div>
     );
 };
