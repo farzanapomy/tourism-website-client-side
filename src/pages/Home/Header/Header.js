@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../../hooks/useAuth';
@@ -20,14 +20,29 @@ const Header = () => {
                         <Navbar.Collapse className="justify-content-end ">
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#features">Features</Nav.Link>
-                            <Nav.Link className='nav-menu' as={HashLink} to="/addFeatures">Add Features</Nav.Link>
                             <Nav.Link className='nav-menu' as={Link} to="">About Us</Nav.Link>
+
                             {user?.email &&
-                               
-                                <Nav.Link as={Link} to="/login" className='nav-menu'>Manage items</Nav.Link>
+                                <NavDropdown className='nav-menu' title="Manage Features" id="basic-nav-dropdown">
+
+                                    <NavDropdown.Item href="#action/3.2">
+                                        <Nav.Link as={HashLink} to="/addFeatures"> Manage All Orders</Nav.Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item href="#action/3.3">
+                                        <Nav.Link as={HashLink} to="/addFeatures">Add Features</Nav.Link>
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Divider />
+                                    <NavDropdown.Item href="#action/3.4">
+                                        <Nav.Link as={HashLink} to="/myOrders">My Orders</Nav.Link>
+                                    </NavDropdown.Item>
+                                </NavDropdown>
+
                             }
                             {user?.email ?
-                                <button onClick={logOut}  >Sign Out</button>
+                                <Nav.Link className='nav-menu' as={HashLink} to="/home#features">
+                                    <button onClick={logOut} >Sign Out</button>
+                                </Nav.Link>
+
                                 : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>
                             }
 

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
 import AddFeatures from './pages/AddFeatures/AddFeatures';
-import BookFeature from './pages/BookFeature/BookFeature';
+import MyOrders from './pages/AdminPanel/MyOrders/MyOrders';
 import Features from './pages/Home/Features/Features';
 import Footer from './pages/Home/Footer/Footer';
 import Header from './pages/Home/Header/Header';
@@ -37,9 +37,10 @@ function App() {
             <PrivateRoute exact path='/features/:id'>
               <SingleFeature></SingleFeature>
             </PrivateRoute>
-            <PrivateRoute path='bookFeature'>
-              <BookFeature></BookFeature>
+            <PrivateRoute exact path='/myOrders'>
+              <MyOrders></MyOrders>
             </PrivateRoute>
+
             <PrivateRoute path='/addFeatures'>
               <AddFeatures></AddFeatures>
             </PrivateRoute>

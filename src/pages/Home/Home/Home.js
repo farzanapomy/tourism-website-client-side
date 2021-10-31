@@ -6,7 +6,7 @@ import Features from '../Features/Features';
 const Home = () => {
     return (
         <div id='home'>
-           <input type="name" />
+          
             <Banner></Banner>
             <Features></Features>
             <Faqs></Faqs>

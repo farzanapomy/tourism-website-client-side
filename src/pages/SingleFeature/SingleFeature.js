@@ -10,26 +10,25 @@ const SingleFeature = () => {
     const { id } = useParams();
     const { user } = useAuth();
     const [feature, setFeature] = useState([])
-    const {
-                register,
-                handleSubmit,
-                watch,
-                formState: { errors },
-            } = useForm();
+    const { register, handleSubmit, reset, formState: { errors }, } = useForm();
 
 
 
-        useEffect(() => {
-            const url = `https://stark-tundra-60468.herokuapp.com/features/${id}`
-            fetch(url)
-                .then(res => res.json())
-                .then(data => setFeature(data))
-        }, []);
+    useEffect(() => {
+        const url = `https://stark-tundra-60468.herokuapp.com/features/${id}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setFeature(data))
+    }, []);
 
     const onSubmit = data => {
         data.status = "Pending";
-        axios.post('http://localhost:5000/bookfeatures', data)
+        axios.post('http://localhost:5000/bookFeature', data)
             .then(res => {
+                if (res.data.insertedId) {
+                    alert('Your order successfully added')
+                    reset()
+                }
                 console.log(res)
             })
 
@@ -77,7 +76,7 @@ const SingleFeature = () => {
                                     />
                                     <br />
                                     <input
-                                        {...register("description", { required: true })}
+                                        {...register(`{feature.name}`, { required: true })}
                                         placeholder="Description"
                                         className="p-2 m-2"
                                     />
@@ -92,12 +91,7 @@ const SingleFeature = () => {
 
                                     <input type="submit" className="btn btn-info w-50" />
                                 </form>
-                                <p className="m-2 mb-2">
-                                    already have account?{" "}
-                                    <Link to="/login">
-                                        <span className="text-danger">create account</span>
-                                    </Link>
-                                </p>
+
                             </div>
                         </div>
                     </div>
