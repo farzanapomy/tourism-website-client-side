@@ -7,7 +7,7 @@ import gif from '../../../images/preview.gif'
 
 const Features = () => {
     const [features, setFeatures] = useState([]);
-    const {  isLoading } = useAuth();
+    const { isLoading } = useAuth();
 
 
 
@@ -27,6 +27,7 @@ const Features = () => {
     return (
         <div id='features' className='container'>
             <h1 className='my-5'>Search offers and find best for you</h1>
+            <h2>We promise,it won’t get boring.</h2>
             <div className='row'>
 
                 <div className='row row-cols-1 row-cols-md-3 g-4'>

@@ -22,13 +22,13 @@ const Header = () => {
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#features">Features</Nav.Link>
                             <Nav.Link className='nav-menu' as={HashLink} to="/addFeatures">Add Features</Nav.Link>
                             <Nav.Link className='nav-menu' as={Link} to="">About Us</Nav.Link>
-                            {user?.email ?
-                                <button onClick={logOut}  >Sign Out</button>
-                                : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>
-                            }
                             {user?.email &&
                                
                                 <Nav.Link as={Link} to="/login" className='nav-menu'>Manage items</Nav.Link>
+                            }
+                            {user?.email ?
+                                <button onClick={logOut}  >Sign Out</button>
+                                : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>
                             }
 
                             {user.email &&
