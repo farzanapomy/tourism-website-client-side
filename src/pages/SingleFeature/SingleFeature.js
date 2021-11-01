@@ -23,7 +23,7 @@ const SingleFeature = () => {
 
     const onSubmit = data => {
         data.status = "Pending";
-        axios.post('http://localhost:5000/bookFeature', data)
+        axios.post('https://stark-tundra-60468.herokuapp.com/bookFeature', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Your order successfully added')

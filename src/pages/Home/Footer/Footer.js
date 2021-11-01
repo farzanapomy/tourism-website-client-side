@@ -1,6 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
+import img from '../../../images/footer.jpg'
 
 import logo from '../../../images/logo (3).JPG';
 import './Footer.css'
@@ -11,47 +12,45 @@ const Footer = () => {
 
     return (
         <div>
-            <div className="container px-4 bg-dark text-light my-5 p-5">
+            <div className="container px-4  text-light my-5 p-5" style={{ backgroundColor: '#344e41' }}>
                 <div className="row g-5">
                     <div className="col">
                         <div className="p-3 border  border-0">
-                            <img className='bg-light text-light w-50' src={logo} alt="" />
+                            <img className='bg-light text-light w-50 my-2' src={logo} alt="" />
                             <p>
-                                Being a full-time psychologist, I make my patients feel special so they can discuss their problems openly. My goal is to help people fighting their fears and pfe issues.
+                                TravelStore is the largest independently owned travel agency headquartered in California, and consistently ranked among the top 50 largest in the United States.
                             </p>
 
                         </div>
                     </div>
                     <div className="col ">
                         <div className="p-3 border  text-style border-0">
-                            <h6>Contact Details</h6>
+                            <h6>Tickets & Booking Information</h6>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <p><i className="fab fa-facebook"></i></p>
-                                <p>1870 Alpaca Way Irvine, Chittagong 92614.Bangladesh</p>
+                                <p>1870 Alpaca Way Irvine, Chittagong 92614,Bangladesh</p>
                             </div>
                             <div className='d-flex justify-content-center align-items-center'>
                                 <p><i className="fas fa-phone"></i></p>
-                                <p>Phone: +1 921 124 9220,Mail: info@psychare.com</p>
+                                <p>Phone: +1 921 124 9220,Mail: info@nextZen.com</p>
 
                             </div>
-                            <div className='d-flex justify-content-center align-items-center m-2'>
-                                <p>{element}</p>
-                                <p>Mon - Fri: ( 9am - 6pm )</p>
-                                <p>Sat & Sun: CLOSED</p>
-                            </div>
+                            <p>Vacation Packages,Season Passes</p>
                         </div>
                     </div>
 
                     <div className="col">
                         <div className="p-3 border border-0  ">
-                            <h6>Book Tickets</h6>
+                            <h6>Get in touch</h6>
                             <p>Hotel Reservation: +1-202-555-0145</p>
-                            <p>Contact us now for a quote about consultation ( Available 24/7 )</p>
+                            <p>Contact with us ( Available 24/7 )</p>
+                            <img src={img} className='w-50 ' alt="" />
+
                         </div>
                     </div>
                 </div>
             </div>
-            <p className='footer-text '>© 2021 - Copyright by Farzana Pomy</p>
+            <p className='text-light p-4 fs-4' style={{ backgroundColor: '#344e41' }}>© 2022 - Copyright by Farzana Pomy</p>
         </div>
     );
 };

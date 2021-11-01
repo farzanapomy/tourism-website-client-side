@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
@@ -6,7 +5,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('https://stark-tundra-60468.herokuapp.com/bookticket')
+        fetch('https://stark-tundra-60468.herokuapp.com/myOrders')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, []);
@@ -14,14 +13,14 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const confirmation=window.confirm('Dear Customer , do you want to delete this order?')
         if (confirmation) {
-            const url = `http://localhost:5000/bookticket/${id}`;
+            const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${id}`;
         fetch(url, {
             method: "DELETE"
         })
             .then(res => res.json())
             .then(data => {
                 if (data.deletedCount) {
-                    alert('Deleted');
+                    alert('Successfully Deleted Your Booking');
                     const rest = orders.filter(order => order._id !== id);
                     setOrders(rest);
                 }
@@ -34,10 +33,10 @@ const MyOrders = () => {
 
 
     return (
-        <div className='container'>
-            <h2>Your total order : bookticket{orders.length}</h2>
+        <div className='container responsive'>
+            <h2>Your total order : {orders.length}</h2>
 
-            <Table striped bordered hover>
+            <Table striped bordered hover responsive>
                 <thead>
                     <tr>
                         <th>#</th>

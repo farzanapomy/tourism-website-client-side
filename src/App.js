@@ -10,6 +10,7 @@ import Home from './pages/Home/Home/Home';
 import Login from './pages/Login/Login/Login';
 import PrivateRoute from './pages/Login/PrivateRoute/PrivateRoute';
 import NotFound from './pages/NotFound/NotFound';
+import OurWinning from './pages/OurWinning/OurWinning';
 import SingleFeature from './pages/SingleFeature/SingleFeature';
 
 
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route exact path='/features'>
               <Features></Features>
+            </Route>
+            <Route exact path='/ourWinning'>
+              <OurWinning></OurWinning>
             </Route>
             <PrivateRoute exact path='/features/:id'>
               <SingleFeature></SingleFeature>

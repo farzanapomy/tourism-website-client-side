@@ -12,7 +12,7 @@ const Login = () => {
 
     const location =useLocation()
     const history = useHistory()
-    const redirect_uri = location?.state?.from || '/singleFeature'
+    const redirect_uri = location?.state?.from || '/features/SingleFeature'
 
     console.log('from', location?.state?.from)
 

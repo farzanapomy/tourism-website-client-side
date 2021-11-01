@@ -11,7 +11,7 @@ const Feature = ({ feature }) => {
             <div className='card-style '>
                 <div className="card">
                     <div className="view overlay">
-                        <img className="card-img-top" src={img} alt="" />
+                        <img className="card-img-top img-fluid" src={img} alt="" />
                         <a>
                             <div className="mask rgba-white-slight"></div>
                         </a>
