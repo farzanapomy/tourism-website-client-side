@@ -6,11 +6,7 @@ import './Login.css'
 
 const Login = () => {
     const { singInWithGoogle } = useAuth();
-    const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
-
-
-    const location =useLocation()
+    const location = useLocation()
     const history = useHistory()
     const redirect_uri = location?.state?.from || '/features/SingleFeature'
 
@@ -20,6 +16,7 @@ const Login = () => {
         singInWithGoogle()
             .then(result => {
                 history.push(redirect_uri)
+                console.log(result)
             })
         // e.target.reset()
     }
@@ -28,18 +25,11 @@ const Login = () => {
 
     return (
         <div >
-            <button onClick={handleGoogleButton} className='btn btn-primary'>Google Sign In</button>
-            <h2>this is login</h2>
-            <form className='login-form' onSubmit={handleSubmit(onSubmit)} >
-                <input type="text" {...register("name", { required: true, maxLength: 20 })} />
-                <br />
-                <input type="email" {...register("email",)} />
-                <br />
-                <input type="number" {...register("age", { min: 18, max: 99 })} />
-                <br />
-                <input type="submit" />
+            <div className='border rounded mx-auto w-75 p-5 bg-dark'>
+                <h2 className='text-light my-3'>PLease Login</h2>
+                <button onClick={handleGoogleButton} className='btn btn-primary'>Google Sign In</button>
+            </div>
 
-            </form>
 
         </div >
     );

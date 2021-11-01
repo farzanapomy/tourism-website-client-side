@@ -1,13 +1,13 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import img1 from '../../../images/banner/img (1).jpg';
-import img2 from '../../../images/banner/img (2).jpg';
-import img3 from '../../../images/banner/img (3).jpg'
+// import img2 from '../../../images/banner/img (2).jpg';
+// import img3 from '../../../images/banner/img (3).jpg'
 
 const Banner = () => {
     return (
-        <div className='mx-2'>
-            <Carousel variant="dark">
+        <div className='mx-2 '>
+            <Carousel variant="dark" className='h-25 mx-auto'>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
@@ -15,11 +15,11 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h5>We are give you a best journey</h5>
+                        <p>Your day can happier with us.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                {/* <Carousel.Item>
                     <img
                         className="d-block w-100"
                         src={img2}
@@ -40,7 +40,7 @@ const Banner = () => {
                         <h5>Third slide label</h5>
                         <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                     </Carousel.Caption>
-                </Carousel.Item>
+                </Carousel.Item> */}
             </Carousel>
         </div>
     );

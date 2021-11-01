@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 
@@ -58,6 +57,7 @@ const SingleFeature = () => {
                                     <input
                                         {...register("name")}
                                         placeholder="Name"
+                                        value={user.displayName}
                                         className="p-2 m-2"
                                     />
                                     <br />
@@ -66,6 +66,7 @@ const SingleFeature = () => {
                                         {...register("email", { required: true })}
                                         placeholder="Email"
                                         className="p-2 m-2"
+                                        value={user.email}
                                     />
                                     <br />
                                     <input
@@ -76,9 +77,10 @@ const SingleFeature = () => {
                                     />
                                     <br />
                                     <input
-                                        {...register(`{feature.name}`, { required: true })}
+                                        {...register("text", { required: true })}
                                         placeholder="Description"
                                         className="p-2 m-2"
+                                        value={feature.name}
                                     />
                                     <br />
                                     <input

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 
-const MyOrders = () => {
-    const [orders, setOrders] = useState([]);
+const ManageOrders = () => {
+    const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
         fetch('https://stark-tundra-60468.herokuapp.com/myOrders')
             .then(res => res.json())
-            .then(data => setOrders(data));
+            .then(data => setAllOrders(data));
     }, []);
 
     const handleDelete = (id) => {
@@ -21,8 +21,8 @@ const MyOrders = () => {
                 .then(data => {
                     if (data.deletedCount) {
                         alert('Successfully Deleted Your Booking');
-                        const rest = orders.filter(order => order._id !== id);
-                        setOrders(rest);
+                        const rest = allOrders.filter(order => order._id !== id);
+                        setAllOrders(rest);
                     }
 
                     console.log(data)
@@ -31,10 +31,11 @@ const MyOrders = () => {
         }
     }
 
-
     return (
-        <div className='container responsive'>
-            <h2>Your total order : {orders.length}</h2>
+        <div>
+            <h2>This is Manage</h2>
+
+            <h2>Your total order : {allOrders.length}</h2>
 
             <Table striped bordered hover responsive>
                 <thead>
@@ -49,7 +50,7 @@ const MyOrders = () => {
                     </tr>
                 </thead>
                 {
-                    orders.map((order, index) =>
+                    allOrders.map((order, index) =>
                         <tbody key={order._id}>
                             <tr>
                                 <td>{index}</td>
@@ -64,9 +65,8 @@ const MyOrders = () => {
 
             </Table>
 
-
         </div>
     );
 };
 
-export default MyOrders;
+export default ManageOrders;

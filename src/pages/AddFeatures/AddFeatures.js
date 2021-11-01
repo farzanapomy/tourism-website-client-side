@@ -12,7 +12,7 @@ const AddFeatures = () => {
     const onSubmit = data => {
         // console.log(data);
 
-        axios.post('http://localhost:5000/features', data)
+        axios.post('https://stark-tundra-60468.herokuapp.com/features', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('added successfully');

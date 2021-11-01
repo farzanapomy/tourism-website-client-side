@@ -4,8 +4,8 @@ import { Accordion } from 'react-bootstrap';
 const Faqs = () => {
     return (
         <>
-            <h2>Vacation Travel FAQ</h2>
-            <Accordion className='container'>
+            <h2 className='my-5 '>Vacation Travel FAQ</h2>
+            <Accordion className='container bg-primary p-5'>
                 <Accordion.Item eventKey="0">
                     <Accordion.Header>WHY SHOULD I USE A TRAVEL AGENT TO BOOK A VACATION?</Accordion.Header>
                     <Accordion.Body>
@@ -25,15 +25,6 @@ const Faqs = () => {
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
-
-
-
-
-
-
-
-
-
 
         </>
     );
