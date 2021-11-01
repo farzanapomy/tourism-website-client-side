@@ -32,7 +32,7 @@ const ManageOrders = () => {
     }
 
     return (
-        <div>
+        <div className='container'>
           
 
             <h2>Total order : {allOrders.length}</h2>

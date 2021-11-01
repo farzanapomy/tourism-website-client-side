@@ -14,8 +14,35 @@ const MyOrders = () => {
             .then(data => setOrders(data));
     }, [user?.email]);
 
+    // detele data 
+
+    const handleDelete = (id) => {
+        const confirmation = window.confirm('Dear Customer , do you want to delete this order?')
+        if (confirmation) {
+            const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${id}`;
+            fetch(url, {
+                method: "DELETE"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        alert('Successfully Deleted Your Booking');
+                        const rest = orders.filter(order => order._id !== id);
+                        setOrders(rest);
+                    }
+
+                    console.log(data)
+                })
+            console.log(id)
+        }
+    }
+
+
+
+
+
     // const handleApprove = (id) => {
-    //     const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${user.email}`;
+    //     const url = `http://localhost:5000/myOrders/${id}`;
     //     fetch(url, {
     //         method: "PUT",
     //         headers: {
@@ -23,9 +50,12 @@ const MyOrders = () => {
     //         },
     //         body: JSON.stringify(orders)
     //     })
-    //         .then()
+    //         .then(res=>res.json())
+    //         .then(data=>{
+    //             console.log(data);
+    //         })
 
-    //         console.log('hitting')
+    //         // console.log('hitting')
     // }
 
 
@@ -41,8 +71,8 @@ const MyOrders = () => {
                         <th>Email</th>
                         <th>Address</th>
                         <th>State</th>
-                        <th>Approve</th>
                         <th>Delete Order</th>
+                        <th>Approve</th>
                     </tr>
                 </thead>
                 {
@@ -54,7 +84,9 @@ const MyOrders = () => {
                                 <td>{order?.email}</td>
                                 <td>{order?.address}</td>
                                 <td>{order?.status}</td>
-                                {/* <button onClick={() => handleApprove(order._id)} className='btn btn-danger '>Approve</button> */}
+                                <button onClick={() => handleDelete(order._id)} className='btn btn-danger '>Delete</button>
+                                {/* <td><button onClick={() => handleApprove(order._id)} className='btn btn-danger '>Approve</button> </td> */}
+                                
                             </tr>
 
                         </tbody>)}
