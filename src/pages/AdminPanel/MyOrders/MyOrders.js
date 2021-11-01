@@ -1,35 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import useAuth from '../../../hooks/useAuth';
+
 
 const MyOrders = () => {
+    const { user } = useAuth()
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('https://stark-tundra-60468.herokuapp.com/myOrders')
+        const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${user?.email}`;
+        fetch(url)
             .then(res => res.json())
             .then(data => setOrders(data));
-    }, []);
+    }, [user?.email]);
 
-    const handleDelete = (id) => {
-        const confirmation = window.confirm('Dear Customer , do you want to delete this order?')
-        if (confirmation) {
-            const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${id}`;
-            fetch(url, {
-                method: "DELETE"
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.deletedCount) {
-                        alert('Successfully Deleted Your Booking');
-                        const rest = orders.filter(order => order._id !== id);
-                        setOrders(rest);
-                    }
+    // const handleApprove = (id) => {
+    //     const url = `https://stark-tundra-60468.herokuapp.com/myOrders/${user.email}`;
+    //     fetch(url, {
+    //         method: "PUT",
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body: JSON.stringify(orders)
+    //     })
+    //         .then()
 
-                    console.log(data)
-                })
-            console.log(id)
-        }
-    }
+    //         console.log('hitting')
+    // }
 
 
     return (
@@ -57,7 +54,7 @@ const MyOrders = () => {
                                 <td>{order?.email}</td>
                                 <td>{order?.address}</td>
                                 <td>{order?.status}</td>
-                                <button onClick={() => handleDelete(order._id)} className='btn btn-danger '>Cancel</button>
+                                {/* <button onClick={() => handleApprove(order._id)} className='btn btn-danger '>Approve</button> */}
                             </tr>
 
                         </tbody>)}

@@ -33,9 +33,9 @@ const ManageOrders = () => {
 
     return (
         <div>
-            <h2>This is Manage</h2>
+          
 
-            <h2>Your total order : {allOrders.length}</h2>
+            <h2>Total order : {allOrders.length}</h2>
 
             <Table striped bordered hover responsive>
                 <thead>
