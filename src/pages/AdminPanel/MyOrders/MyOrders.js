@@ -69,7 +69,7 @@ const MyOrders = () => {
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Address</th>
+                        <th>Ordered Offer</th>
                         <th>State</th>
                         <th>Delete Order</th>
                         <th>Approve</th>
@@ -82,10 +82,10 @@ const MyOrders = () => {
                                 <td>{index}</td>
                                 <td>{order?.name}</td>
                                 <td>{order?.email}</td>
-                                <td>{order?.address}</td>
+                                <td>{order?.text}</td>
                                 <td>{order?.status}</td>
                                 <button onClick={() => handleDelete(order._id)} className='btn btn-danger '>Delete</button>
-                                {/* <td><button onClick={() => handleApprove(order._id)} className='btn btn-danger '>Approve</button> </td> */}
+                                <td><button className='btn btn-success '>Approve</button> </td>
                                 
                             </tr>
 

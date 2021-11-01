@@ -20,11 +20,12 @@ const Header = () => {
                         <Navbar.Collapse className="justify-content-end ">
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#features">Features</Nav.Link>
-                            
+
                             <Nav.Link className='nav-menu' as={HashLink} to="/home#aboutUs">About Us</Nav.Link>
+                            <Nav.Link className='nav-menu' as={HashLink} to="/home#faqs">FAQs</Nav.Link>
 
                             {user?.email &&
-                                <NavDropdown className='nav-menu' title="Manage Features" id="basic-nav-dropdown">
+                                <NavDropdown className='nav-menu ' title="Manage Features" id="basic-nav-dropdown">
 
                                     <NavDropdown.Item href="#action/3.2">
                                         <Nav.Link as={HashLink} to="/addFeatures">Add Features</Nav.Link>
@@ -40,8 +41,8 @@ const Header = () => {
 
                             }
                             {user?.email ?
-                                <Nav.Link className='nav-menu' as={HashLink} to="/home#features">
-                                    <button onClick={logOut} >Sign Out</button>
+                                <Nav.Link as={HashLink} to="/home#features">
+                                    <button onClick={logOut} className='btn btn-warning'>Sign Out</button>
                                 </Nav.Link>
 
                                 : <Nav.Link as={Link} to="/login" className='nav-menu'>Log In</Nav.Link>

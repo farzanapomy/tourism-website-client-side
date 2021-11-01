@@ -1,9 +1,16 @@
 .card-style {
     height: 600px;
+    border-radius: 35px;
+}
+.card-style:hover {
+    cursor:pointer;
+    transform-style: preserve-3d;
 }
 .card-style img{
+    padding: 5px;
     width: 400px;
     height: 200px;
+    border-radius: 20px;
 }
 .card-style img:hover{
     background-color: #000000; 

@@ -15,7 +15,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>We are give you a best journey</h5>
+                        <h1>We are give you a best journey</h1>
                         <p>Your day can happier with us.</p>
                     </Carousel.Caption>
                 </Carousel.Item>

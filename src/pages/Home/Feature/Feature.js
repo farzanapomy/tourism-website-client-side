@@ -8,7 +8,7 @@ const Feature = ({ feature }) => {
 
     return (
         <>
-            <div className='card-style '>
+            <div className='card-style'>
                 <div className="card">
                     <div className="view overlay">
                         <img className="card-img-top img-fluid" src={img} alt="" />

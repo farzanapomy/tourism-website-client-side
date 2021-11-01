@@ -27,19 +27,21 @@ const Features = () => {
 
     return (
         <div id='features' className='container'>
-            <h1 className='my-5'>Search offers and find best for you</h1>
-            <h2>We promise,it won’t get boring.</h2>
-           
+            <div className='my-5'>
+                <h1 >Search offers and find best for you</h1>
+                <h5>We promise,it won’t get boring.</h5>
+            </div>
 
-                <div className='features-section'>
-                    {
-                        features.map(feature => <Feature
-                            key={feature._id}
-                            feature={feature}
-                        ></Feature>)
-                    }
-                </div>
-            
+
+            <div className='features-section'>
+                {
+                    features.map(feature => <Feature
+                        key={feature._id}
+                        feature={feature}
+                    ></Feature>)
+                }
+            </div>
+
 
         </div>
     );
