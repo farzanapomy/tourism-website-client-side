@@ -12,7 +12,6 @@ const SingleFeature = () => {
     const { register, handleSubmit, reset, formState: { errors }, } = useForm();
 
 
-
     useEffect(() => {
         const url = `https://stark-tundra-60468.herokuapp.com/features/${id}`
         fetch(url)
